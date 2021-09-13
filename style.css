@@ -1,0 +1,39 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
+}
+
+.map {
+  height: 80%;
+  width: 80%;
+}
+
+.line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  -webkit-animation: draw 5s infinite alternate;
+          animation: draw 5s infinite alternate;
+}
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
